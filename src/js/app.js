@@ -13,7 +13,7 @@ var app = new Vue({
         litres: function () {
             if (this.unit === 'inch') {
                 return this.volume * 0.0163871;
-            }else if(this.unit === 'mm'){
+            } else if (this.unit === 'mm') {
                 return this.volume / 10000;
             }
             return this.volume / 1000;
@@ -27,5 +27,32 @@ var app = new Vue({
         pounds: function () {
             return this.kilos * 2.20462;
         }
+    },
+    directives: {
+        select: {
+            twoWay: true,
+
+            bind: function () {
+                $(this.el).material_select();
+
+                var self = this;
+
+                $(this.el).on('change', function () {
+                    self.set($(self.el).val());
+                });
+            },
+
+            update: function (newValue, oldValue) {
+                $(this.el).val(newValue);
+            },
+
+            unbind: function () {
+                $(this.el).material_select('destroy');
+            }
+        }
     }
+});
+
+$(document).ready(function () {
+    $('select').material_select();
 });
