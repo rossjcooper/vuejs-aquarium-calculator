@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aquarium Calculator</title>
+    <link rel="stylesheet" href="./build/css/app.css">
+</head>
+<body>
+<div id="app">
+    <h1>Aquarium Calculator</h1>
+    <section class="dimensions">
+        <form action="">
+            <h2>Dimensions</h2>
+            <div class="input-group">
+                <label for="width">Width</label>
+                <input type="number" min="0" v-model="width" placeholder="Width" id="width">
+            </div>
+            <div class="input-group">
+                <label for="length">Length</label>
+                <input type="number" min="0" v-model="length" placeholder="Length" id="length">
+            </div>
+            <div class="input-group">
+                <label for="height">Height</label>
+                <input type="number" min="0" v-model="height" placeholder="Height" id="height">
+            </div>
+            <div class="input-group">
+                <label for="unit">Unit</label>
+                <select v-model="unit" id="unit">
+                    <option>inch</option>
+                    <option>cm</option>
+                    <option>mm</option>
+                </select>
+            </div>
+        </form>
+    </section>
+    <section class="results">
+        <h2>Results</h2>
+        <span>{{ volume.toFixed(2) }} {{ unit }}<sup>3</sup></span>
+        <span>{{ litres.toFixed(2) }} Litres</span>
+        <span>{{ gallons.toFixed(2) }} U.S. Gallons</span>
+        <span>{{ kilos.toFixed(2) }} kg</span>
+        <span>{{ pounds.toFixed(2) }} lbs</span>
+    </section>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script src="./build/js/app.js"></script>
+</body>
+</html>

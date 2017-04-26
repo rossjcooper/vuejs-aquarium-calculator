@@ -1,0 +1,2 @@
+"use strict";var app=new Vue({el:"#app",data:{width:0,length:0,height:0,unit:"cm"},computed:{volume:function(){return this.width*this.length*this.height},litres:function(){return"inch"===this.unit?.0163871*this.volume:"mm"===this.unit?this.volume/1e4:this.volume/1e3},gallons:function(){return.264172*this.litres},kilos:function(){return this.litres},pounds:function(){return 2.20462*this.kilos}}});
+//# sourceMappingURL=app.js.map
