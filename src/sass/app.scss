@@ -18,9 +18,13 @@ h2{
       display: block;
       font-weight: bold;
     }
+    @media (max-width: 350px){
+      display: block;
+      width: 100%;
+    }
   }
   input, select{
-    border: aliceblue 1px solid;
+    border: aliceblue 2px solid;
     padding: 8px;
     border-radius: 2px;
   }
@@ -39,4 +43,8 @@ h2{
     margin: 5px;
     background-color: aliceblue;
   }
+}
+.logo{
+  max-height: 1.2rem;
+  max-width: 1.2rem;
 }

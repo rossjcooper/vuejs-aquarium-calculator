@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aquarium Calculator</title>
+    <title>Aquarium Calculator | Aquarium Volume | Aquarium Weight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate aquarium volume and weights, supports multiple UK and US units.">
     <link rel="stylesheet" href="./build/css/app.css">
 </head>
 <body>
 <div id="app">
     <h1>Aquarium Calculator</h1>
+    <p>The aquarium calculator can be used to calculate the volume and weight using a variety of measurements.</p>
     <section class="dimensions">
         <form action="">
             <h2>Dimensions</h2>
@@ -40,6 +43,13 @@
         <span>{{ gallons.toFixed(2) }} U.S. Gallons</span>
         <span>{{ kilos.toFixed(2) }} kg</span>
         <span>{{ pounds.toFixed(2) }} lbs</span>
+    </section>
+    <section>
+        <p>
+            Built by <a href="http://ross-cooper.co.uk">Ross Cooper</a> using
+            <a href="https://vuejs.org/"><img src="https://vuejs.org/images/logo.png" alt="Vue.js logo" class="logo">Vue.js</a>
+        </p>
+        <p>View on <a href="https://github.com/rossjcooper/vuejs-aquarium-calculator">Github</a></p>
     </section>
 </div>
 <script src="https://unpkg.com/vue"></script>
