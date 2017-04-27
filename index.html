@@ -5,54 +5,49 @@
     <title>Aquarium Calculator | Aquarium Volume | Aquarium Weight</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calculate aquarium volume and weights, supports multiple UK and US units.">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="./build/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 <div id="app">
     <header>
-        <nav>
-            <div class="nav-wrapper blue darken-3">
-                <a href="#" class="brand-logo center">Aquarium Calculator</a>
-            </div>
-        </nav>
+        <h1>Aquarium Calculator</h1>
     </header>
     <main>
         <div class="container">
             <div class="row">
-                <div class="col s12">
+                <div class="full">
                     <p>The aquarium calculator can be used to calculate the volume and weight using a variety of
                         measurements.</p>
                     <form action="">
                         <h4>Dimensions</h4>
-                        <div class="input-field col s4">
-                            <input type="number" min="0" v-model="width" placeholder="Width" id="width">
+                        <div class="input-field third">
                             <label for="width">Width</label>
+                            <input type="number" min="0" v-model="width" placeholder="Width" id="width">
                         </div>
-                        <div class="input-field col s4">
-                            <input type="number" min="0" v-model="length" placeholder="Length" id="length">
+                        <div class="input-field third">
                             <label for="length">Length</label>
+                            <input type="number" min="0" v-model="length" placeholder="Length" id="length">
                         </div>
-                        <div class="input-field col s4">
-                            <input type="number" min="0" v-model="height" placeholder="Height" id="height">
+                        <div class="input-field third">
                             <label for="height">Height</label>
+                            <input type="number" min="0" v-model="height" placeholder="Height" id="height">
                         </div>
-                        <div class="input-field col s12">
-                            <select v-select="unit" id="unit">
+                        <div class="col full">
+                            <label for="unit">Unit</label>
+                            <select v-model="unit" id="unit">
                                 <option>inch</option>
                                 <option>cm</option>
                                 <option>mm</option>
                             </select>
-                            <label for="unit">Unit</label>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12">
+                <div class="full">
                     <h4>Results</h4>
-                    <div class="card light-blue darken-2">
+                    <div class="card">
                         <div class="card-content white-text">
                             <span class="card-title">Volume</span>
                             <p>{{ volume.toFixed(2) }} {{ unit }}<sup>3</sup></p>
@@ -60,7 +55,7 @@
                             <p>{{ gallons.toFixed(2) }} U.S. Gallons</p>
                         </div>
                     </div>
-                    <div class="card light-blue darken-2">
+                    <div class="card">
                         <div class="card-content white-text">
                             <span class="card-title">Weight</span>
                             <p>{{ kilos.toFixed(2) }} kg</p>
@@ -74,10 +69,10 @@
             </div>
         </div>
     </main>
-    <footer class="page-footer grey lighten-2">
+    <footer>
         <div class="container">
             <div class="row">
-                <div class="col s12">
+                <div class="full">
                     <p>
                         Built by <a href="http://ross-cooper.co.uk">Ross Cooper</a> using
                         <a href="https://vuejs.org/"><img src="https://vuejs.org/images/logo.png" alt="Vue.js logo"
@@ -90,10 +85,24 @@
     </footer>
 
 </div>
-<!-- Compiled and minified JavaScript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <script src="https://unpkg.com/vue"></script>
 <script src="./build/js/app.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-59508631-7', 'auto');
+    ga('send', 'pageview');
+
+</script>
 </body>
 </html>

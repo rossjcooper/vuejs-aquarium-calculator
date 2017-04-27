@@ -1,3 +1,85 @@
-.logo{
-  max-height: 1rem;
+$blue: #42aefb;
+$white: #fcfcfc;
+$black: #000000;
+*{
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  width: 100%;
+  padding: 0 10px;
+  float: left;
+}
+.row{
+  float: left;
+  width: 100%;
+}
+.full{
+  width: 100%;
+  float: left;
+  padding: 5px;
+}
+.third{
+  @extend .full;
+  width: 33%;
+}
+.card{
+  padding: 10px;
+  background-color: $blue;
+  color: $white;
+  margin: 10px 0;
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+  .card-title{
+    font-size: 1.7em;
+  }
+}
+header{
+  background-color: $blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $white;
+  h1{
+    margin: 0px;
+    padding: 10px;
+  }
+}
+main{
+  margin-top: 52px;
+}
+footer{
+  float: left;width: 100%;
+  background-color: #b4b4b4;
+  color: $white;
+  a{
+    color: darken($blue, 10%);
+  }
+  .logo{
+    max-height: 1rem;
+  }
+}
+input, select{
+  border: none;
+  border-bottom: 1px solid $black;
+  width: 100%;
+  padding: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $white;
+  border-radius: 0;
+}
+select{
+  background-image: url("../../img/select.png");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  padding-right: 15px;
 }
